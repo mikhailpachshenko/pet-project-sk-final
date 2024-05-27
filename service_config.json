@@ -1,0 +1,30 @@
+[
+    {
+        "service":"sms",
+        "source":"sms.data"
+    },
+    {
+        "service":"mms",
+        "source":"http://127.0.0.1:8383/mms"
+    },
+    {
+        "service":"voice",
+        "source":"voice.data"
+    },
+    {
+        "service":"email",
+        "source":"email.data"
+    },
+    {
+        "service":"billing",
+        "source":"billing.data"
+    },
+    {
+        "service":"support",
+        "source":"http://127.0.0.1:8383/support"
+    },
+    {
+        "service":"incident",
+        "source":"http://127.0.0.1:8383/accendent"
+    }
+]
