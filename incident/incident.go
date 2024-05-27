@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
-	"project/model"
 	"sort"
+
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
 )
 
 func GetIncidentData(sourcePath string) []model.IncidentData {

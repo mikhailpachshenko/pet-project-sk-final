@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
-	"project/model"
+
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
 )
 
 func GetSupportData(sourcePath string) []int {

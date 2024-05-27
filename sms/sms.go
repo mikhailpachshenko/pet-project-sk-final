@@ -1,12 +1,13 @@
 package sms
 
 import (
-	"project/model"
-	"project/pkg/signs"
-	"project/pkg/utils"
 	"slices"
 	"sort"
 	"strings"
+
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/signs"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/utils"
 )
 
 func GetSMSData(sourcePath string) [][]model.SMSData {

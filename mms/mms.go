@@ -4,10 +4,11 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
-	"project/model"
-	"project/pkg/signs"
 	"slices"
 	"sort"
+
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/signs"
 )
 
 func GetMMSData(sourcePath string) (sortLists [][]model.MMSData) {

@@ -1,8 +1,8 @@
 package billing
 
 import (
-	"project/model"
-	"project/pkg/utils"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/utils"
 )
 
 func GetBillingData(sourcePath string) model.BillingData {

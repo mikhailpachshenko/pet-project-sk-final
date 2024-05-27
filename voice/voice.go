@@ -1,11 +1,12 @@
 package voice
 
 import (
-	"project/model"
-	"project/pkg/signs"
-	"project/pkg/utils"
 	"strconv"
 	"strings"
+
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/signs"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/utils"
 )
 
 func GetVoiceData(sourcePath string) (listVoice []model.VoiceCallData) {
