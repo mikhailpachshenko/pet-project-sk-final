@@ -5,14 +5,14 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/mikhailpachshenko/pet-project-sk-final.git/model"
-	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/signs"
-	"github.com/mikhailpachshenko/pet-project-sk-final.git/pkg/utils"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/internal/model/service"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/internal/model/signs"
+	"github.com/mikhailpachshenko/pet-project-sk-final.git/internal/utils"
 )
 
-func GetSMSData(sourcePath string) [][]model.SMSData {
-	listSMS := make([]model.SMSData, 0)
-	var list [][]model.SMSData // #11.2
+func GetSMSData(sourcePath string) [][]service.SMSData {
+	listSMS := make([]service.SMSData, 0)
+	var list [][]service.SMSData // #11.2
 
 	records := utils.ReadFileToStrings(sourcePath) // #2.1 | #2.2
 
@@ -21,7 +21,7 @@ func GetSMSData(sourcePath string) [][]model.SMSData {
 			columns := strings.Split(string(records[i][0]), ";") // #2.3
 			if len(columns) == 4 {                               // #2.4 | #2.5 | #2.8
 				if signs.FindCountry(columns[0]) && signs.FindProvider(columns[3]) { // #2.6 | #2.7
-					listSMS = append(listSMS, model.SMSData{
+					listSMS = append(listSMS, service.SMSData{
 						Country:      signs.CodeToCountry(columns[0]), // #11.2
 						Bandwidth:    columns[1],
 						ResponseTime: columns[2],
@@ -37,7 +37,6 @@ func GetSMSData(sourcePath string) [][]model.SMSData {
 		country := slices.Clone(listSMS)
 		list = append(list, provider, country) // #11.2
 
-		/* fmt.Print("\nSMS: ", list, "\n") */
 		return list
 	}
 	return list

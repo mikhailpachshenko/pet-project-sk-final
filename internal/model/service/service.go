@@ -1,4 +1,4 @@
-package model
+package service
 
 type SMSData struct { // #2.4; #2.9
 	Country      string

@@ -392,7 +392,7 @@ func getRandomSupportTickets() int {
 }
 
 func getFilapathByFilename(filename string) string {
-	return "" + filename
+	return "./temp/" + filename
 }
 
 func getRandomBandwidthInString() string {
